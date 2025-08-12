@@ -1,9 +1,14 @@
+import os
+
+from dotenv import load_dotenv
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+
+load_dotenv(override=True)
 
 servico = Service(ChromeDriverManager().install())
 
@@ -14,7 +19,8 @@ wait = WebDriverWait(navegador, 10)
 def web_login():
 
         try:
-            navegador.get('https://pathfinder.automationanywhere.com/challenges/automationanywherelabs-employeedatamigration.html')
+            user_url = os.getenv('USER_URL')
+            navegador.get(user_url)
             print("Acessou normalmente")
             navegador.find_element('xpath','//*[@id="button_modal-login-btn__iPh6x"]"]')
         except:
@@ -26,14 +32,16 @@ def web_login():
         campo_email = wait.until(
             EC.visibility_of_element_located(('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[2]/div/input'))
                        )
-        navegador.find_element('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[2]/div/input').send_keys('gabriel.13alves@yahoo.com.br')
+        user_login = os.getenv('USER_LOGIN')
+        navegador.find_element('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[2]/div/input').send_keys(user_login)
 
         navegador.find_element('xpath', '/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/button').click()
 
         campo_senha = wait.until(
             EC.visibility_of_element_located(('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input'))
         )
-        navegador.find_element('xpath', '/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input').send_keys('5qtCK*7fMABtd7yZ')
+        user_password = os.getenv('USER_SENHA')
+        navegador.find_element('xpath', '/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input').send_keys(user_password)
         navegador.find_element('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[4]/div/div[2]/button').click()
 
         campo_id = wait.until(
