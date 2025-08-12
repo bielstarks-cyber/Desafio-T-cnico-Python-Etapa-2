@@ -70,5 +70,4 @@ def web_form(campo_valor):
     gestor = navegador.find_element('xpath','/html/body/div[2]/div/form/div[6]/div[2]/input')
     enviar = navegador.find_element('xpath', '/html/body/div[2]/div/form/div[7]/div[1]/button')
 
-
     return nome, sobrenome, telefone, email, cidade, estado, postal, cargo, setor, inicio, gestor, enviar
