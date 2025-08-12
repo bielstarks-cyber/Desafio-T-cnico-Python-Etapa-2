@@ -25,24 +25,3 @@ def desk_form(app):
 
 
     return lista
-
-
-
-
-
-
-
-
-
-# if __name__ == "__main__":
-#     app = desk_abrir('1020')
-#     desk_form()
-
-    # texto = Employee.child_window(auto_id='txtFirstName')
-    # valor_campo = texto.texts()[0]
-    # print("Texto 1",valor_campo)
-
-
-# edit = Employee.child_window(classname='Enter the Emp Number')
-# edit.send_keys('123456')
-# app.EmployeeList.send_keys(Keys.ARROW_RIGHT)
