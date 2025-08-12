@@ -7,7 +7,7 @@ Este projeto tem como objetivo automatizar um processo utilizando Python e a bib
 ## Pré-requisitos
 
 Antes de iniciar, certifique-se de que os seguintes itens estão instalados e configurados no seu ambiente:
-
+* **Download do Executavel:** Baixe o executavel EmployeeList.exe no link: https://github.com/AutomationAnywhere/Employee-Data-Migration/raw/master/EmployeeList.zip
 * **Executável do Sistema:** O arquivo `EmployeeList.exe` deve estar na raiz do disco local, em `C:\`.
 * **Navegador:** [Google Chrome](https://www.google.com/chrome/) instalado e atualizado.
 * **Python:** Versão 3.8 ou superior.
