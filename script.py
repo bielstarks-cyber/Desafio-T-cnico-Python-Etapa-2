@@ -33,7 +33,7 @@ def web_login():
         campo_senha = wait.until(
             EC.visibility_of_element_located(('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input'))
         )
-        navegador.find_element('xpath', '/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input').send_keys('Parnelandia@123')
+        navegador.find_element('xpath', '/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[3]/div/input').send_keys('5qtCK*7fMABtd7yZ')
         navegador.find_element('xpath','/html/body/div[3]/div[3]/div/div[2]/div/div/div/div/div[1]/div[4]/div/div[2]/button').click()
 
         campo_id = wait.until(
